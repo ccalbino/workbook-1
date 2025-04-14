@@ -72,10 +72,11 @@ public class MathApp {
         //Question 7
         //double randomNum;
         System.out.println("7. Find and display a random number between 0 and 1");
+        double randomNumber = Math.random();
 
 
 
-        System.out.println("The random number is " + Math.random());
+        System.out.println("The random number is " + randomNumber);
 // declare variables here
 // then code solution
 
