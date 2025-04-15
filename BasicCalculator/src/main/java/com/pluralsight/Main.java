@@ -20,7 +20,6 @@ public class Main {
 
         //Choose Possible calculations
         System.out.println("Possible calculations:\n(A)dd\n(S)ubtract\n(M)ultiply\n(D)ivide\nPlease select an option:");
-        //use 'printf' with escape sequence?
         String computation;
         computation = scanner.nextLine();
 
