@@ -28,6 +28,19 @@ public class Main {
         double product = hoursWorked * payRate;
         System.out.printf( name + " worked %f hours and made %f per hour to gross %f per week", hoursWorked ,payRate, product);
 
+        //If statement
+
+        double totalPay;
+
+        if (hoursWorked > 40) {
+            double normalPay = 40 * hoursWorked;
+            double overTime = (hoursWorked - 40) + (payRate * 1.5);
+
+            totalPay = normalPay + overTime;
+        } else {
+            totalPay = hoursWorked * payRate;
+        }
+
 
 
 
