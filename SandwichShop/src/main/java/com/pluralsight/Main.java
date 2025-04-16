@@ -17,6 +17,10 @@ public class Main {
         System.out.println("Hi " + name + ", please select the size sandwich you would like.\n 1 for our regular size sandwich: Priced $5.45 \n 2 for our large size sandwich: Priced $8.95");
         double sandwichSize = scanner.nextFloat();
 
+        //sandwich upsize option
+
+
+
         //Prompt for age
         System.out.println("Thanks " + name + ", for choosing your sandwich size.\n We are proud to offer a youth discount or a senior discount.\n Enter your age to see if you apply! ");
         double age = scanner.nextFloat();
