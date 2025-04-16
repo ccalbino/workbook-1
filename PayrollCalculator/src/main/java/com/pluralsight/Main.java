@@ -2,6 +2,9 @@ package com.pluralsight;
 
 import java.util.Scanner;
 
+//Scanner scanner = new Scanner(System.in);
+
+
 public class Main {
     public static void main(String[] args) {
 
@@ -29,7 +32,7 @@ public class Main {
 
 
 
-        double grossPay; //= hoursWorked * payRate;
+        double grossPay = calcGrossPay(hoursWorked, payRate); //= hoursWorked * payRate;
 
         if (hoursWorked <= 40){
             grossPay = hoursWorked * payRate;
@@ -86,4 +89,23 @@ public class Main {
 
 
     }
+
+
+
+
+    public static double calcGrossPay(float hoursWorked, double payRate){
+        if (hoursWorked <= 40){
+            return hoursWorked * payRate;
+        }
+        else{
+
+            float overtimeHours = hoursWorked - 40;
+            double basePay = 40 * payRate;
+            double overtimeRate = payRate * 1.5;
+            double overtimePay = overtimeHours * overtimeRate;
+
+            return basePay + overtimePay;
+    }
 }
+
+public static String promptForName
