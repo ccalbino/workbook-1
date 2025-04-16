@@ -7,6 +7,13 @@ public class Main {
 
         Scanner scanner = new Scanner(System.in);
 
+        double regularPrice = 5.45;
+        double largePrice = 8.95;
+
+        //sandwich upsize option
+        double loadedRegular = 1;
+        double loadedLarge = 1.75;
+
         //Intoduction
 
         System.out.println("Hello, welcome to Bino's Sandwich Shop! What is your name?");
@@ -14,11 +21,63 @@ public class Main {
 
         //Prompt for the sandwich size
 
-        System.out.println("Hi " + name + ", please select the size sandwich you would like.\n 1 for our regular size sandwich: Priced $5.45 \n 2 for our large size sandwich: Priced $8.95");
+        System.out.println("Hi " + name + ", please select the size sandwich you would like."
+                + "\n 1. for our regular size sandwich: Priced $5.45 "
+                + "\n 2. for our large size sandwich: Priced $8.95");
         double sandwichSize = scanner.nextFloat();
+        scanner.nextLine();
 
-        //sandwich upsize option
+        double price;
+        if( sandwichSize == 1){
+            price = regularPrice;
+        }
+        else{
+            price = largePrice;
+        }
 
+        //Loaded Sandwich
+
+        System.out.println("Thanks " + name + ", for choosing number " + sandwichSize + "."
+                + "\n Would you like that sandwich to be loaded? "
+                + "\n The loaded option on a regular sandwich is an additional $1.00"
+                + "\n The loaded option on a large sandwich is an additional $1.75 "
+                + "\n Type Yes or No to continue");
+        String loadedChoice = scanner.nextLine();
+
+
+        if (loadedChoice.equalsIgnoreCase("Yes")) {
+            if (sandwichSize == 1) {
+                price += loadedRegular;
+            } else if (sandwichSize == 2) {
+                price += loadedLarge;
+
+            }else
+
+
+//          } else if (loadedChoice.equalsIgnoreCase("No")) {
+//            if (sandwichSize == 1) {
+//                price = regularPrice;
+//            } else if (sandwichSize == 2) {
+//                price = largePrice;
+//            }
+//        }
+
+
+
+
+//        if (loadedChoice.equalsIgnoreCase(("Yes"))) {
+//            if (sandwichSize == 1) {
+//                price = price + loadedRegular;
+//               // price += loadedRegular;
+//            } else if (sandwichSize == 2) {
+//                price += loadedLarge;
+//
+//            }else price = regularPrice;
+//           } else if (loadedChoice.equalsIgnoreCase(("No"))) {
+//                price = regularPrice;
+
+
+        }
 
 
         //Prompt for age
@@ -27,8 +86,8 @@ public class Main {
 
         //if statment for discount
 
-        double regularPrice = 5.45;
-        double largePrice = 8.95;
+        //double regularPrice = 5.45;
+        //double largePrice = 8.95;
 
 
         if (age <= 17 && sandwichSize == 1){
