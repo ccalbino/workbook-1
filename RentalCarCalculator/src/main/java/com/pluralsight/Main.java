@@ -63,7 +63,7 @@ public class Main {
         int age = scanner.nextInt();
 
         //If statment to add surcharge for age
-        if (age <= 25){
+        if (age < 25){
             surcharge = basicCarRental * underageSurcharge;
             System.out.println("Underage surcharge added.");
 
