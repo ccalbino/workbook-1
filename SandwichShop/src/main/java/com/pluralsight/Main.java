@@ -148,8 +148,8 @@ public class Main {
         double largePrice = 8.95;
 
         // Sandwich upsize option
-        double loadedRegular = 1;
-        double loadedLarge = 1.75;
+        double loadedRegularPrice = 1;
+        double loadedLargePrice = 1.75;
 
         // Introduction
         System.out.println("Hello, welcome to Bino's Sandwich Shop! What is your name?");
@@ -180,9 +180,9 @@ public class Main {
         // price if customer chooses loaded option
         if (loadedChoice.equalsIgnoreCase("Yes")) {
             if (sandwichSize == 1) {
-                price = regularPrice + loadedRegular;
+                price = regularPrice + loadedRegularPrice;
             } else if (sandwichSize == 2) {
-                price = largePrice + loadedLarge;
+                price = largePrice + loadedLargePrice;
             }
         } else if (loadedChoice.equalsIgnoreCase("No")) {
             if (sandwichSize == 1) {
@@ -200,6 +200,7 @@ public class Main {
 
         // discount percentage
         double discountPercentage = 0;
+\
         if (age <= 17) {
             discountPercentage = 10;
         } else if (age >= 65) {
@@ -213,7 +214,7 @@ public class Main {
                     "\nYour price is now " + totalPrice);
         } else {
             // No discount applied
-            System.out.println(name + ", you are not eligible for any discount." +
+            System.out.println("Sorry, " + name + ", you are not eligible for any discount." +
                     "\nYour price is " + price);
         }
     }
