@@ -151,6 +151,8 @@ public class Main {
         double loadedRegularPrice = 1;
         double loadedLargePrice = 1.75;
 
+        double price;
+
         // Introduction
         System.out.println("Hello, welcome to Bino's Sandwich Shop! What is your name?");
         String name = scanner.nextLine();
@@ -162,7 +164,7 @@ public class Main {
         double sandwichSize = scanner.nextFloat();
         scanner.nextLine();
 
-        double price;
+        //double price;
         if (sandwichSize == 1) {
             price = regularPrice;
         } else {
@@ -200,7 +202,7 @@ public class Main {
 
         // discount percentage
         double discountPercentage = 0;
-\
+
         if (age <= 17) {
             discountPercentage = 10;
         } else if (age >= 65) {
